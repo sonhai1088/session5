@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển đơn giản</title>
+</head>
+<body>
+    <select id = "chonLoai">
+        <option value = "anhViet" type = "text">AnhViet</option>
+        <option value= "vietAnh" type = "text">VietAnh</option>
+    </select>
+    <input id = "nhap" type = "text" />
+    <button onclick="tran()">Translate</button>
+    <p id = "ketQua"></p>
+
+<script>
+    function tran(){
+        let eng = ["go", "play", "eat", "sleep", "work"];
+        let vie = ["đi", "chơi", "ăn", "ngủ", "làm việc"];
+        let nhap = document.getElementById("nhap").value;
+        let loai = document.getElementById("chonLoai").value;
+        i = 0;
+        let a = document.getElementById("ketQua");
+        if (loai === 'anhViet') {
+            for (i; i < eng.length; i++){
+                if (nhap === eng[i]){
+                    a.innerHTML = "Kết quả là: " + vie[i];
+                }
+            }
+        }
+        if (loai === 'vietAnh') {
+            for (i; i < vie.length; i++){
+                if (nhap === vie[i]){
+                    a.innerHTML = "Kết quả là: " + eng[i];
+                }
+            }
+        }
+    }
+    // let eng = ["go", "play", "eat", "sleep", "work"];
+    // let vie = ["đi", "chơi", "ăn", "ngủ", "làm việc"];
+    // let nhap = document.getElementById("nhap").value;
+    // let loai = document.getElementById("chonLoai").value;
+    // function dich() {
+    //     if (loai === 'anhViet') {
+    //         let i = 0;
+    //         let e = eng[i];
+    //         for (i; i < eng.length; i++) {
+    //             if (e == nhap) {
+    //                 document.write(vie[i]);
+    //             }
+    //         }
+    //     }
+    // }
+
+</script>
+
+
+</body>
+</html>
